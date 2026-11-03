@@ -1,31 +1,9 @@
 import type { Metadata } from "next";
-import { Cinzel, Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingActions } from "@/components/layout/FloatingActions";
 import { siteConfig } from "@/data/config";
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  variable: "--font-cinzel",
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -146,7 +124,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${cinzel.variable} ${playfair.variable} ${inter.variable}`}>
+    <html lang="en">
       <body className="min-h-screen bg-brand-navy-950 text-slate-100 flex flex-col font-sans selection:bg-brand-gold-500 selection:text-brand-navy-950">
         <script
           type="application/ld+json"
