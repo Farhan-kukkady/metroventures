@@ -147,13 +147,11 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${cinzel.variable} ${playfair.variable} ${inter.variable}`}>
-      <head>
+      <body className="min-h-screen bg-brand-navy-950 text-slate-100 flex flex-col font-sans selection:bg-brand-gold-500 selection:text-brand-navy-950">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="min-h-screen bg-brand-navy-950 text-slate-100 flex flex-col font-sans selection:bg-brand-gold-500 selection:text-brand-navy-950">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

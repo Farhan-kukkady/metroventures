@@ -56,13 +56,14 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-            <div className="relative w-9 h-9 sm:w-11 sm:h-11 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 shrink-0 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/logo-icon.svg"
                 alt="Metro Ventures Seal"
-                fill
+                width={44}
+                height={44}
                 priority
-                className="object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="flex flex-col">

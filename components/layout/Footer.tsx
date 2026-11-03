@@ -25,12 +25,13 @@ export function Footer() {
           {/* Col 1 & 2: Brand & Identity */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+              <div className="shrink-0">
                 <Image
                   src="/logo-icon.svg"
                   alt="Metro Ventures Seal"
-                  fill
-                  className="object-contain"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
                 />
               </div>
               <div className="flex flex-col">
