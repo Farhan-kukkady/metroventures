@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, MessageCircle, Shield, Award, Scale, ArrowUpRight } from "lucide-react";
+import { Phone, Shield, Award, Scale, ArrowUpRight } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { companyData } from "@/data/company";
 
 export function LeadershipSection() {
@@ -89,7 +90,7 @@ export function LeadershipSection() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/30 text-[#25D366] hover:text-white text-xs font-semibold transition-all"
                 >
-                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
                   <span>Message on WhatsApp</span>
                 </a>
               </div>

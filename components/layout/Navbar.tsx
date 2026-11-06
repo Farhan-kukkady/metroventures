@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ArrowUpRight, ShieldCheck, ChevronDown } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { siteConfig } from "@/data/config";
 
 const navLinks = [
@@ -284,9 +285,10 @@ export function Navbar() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-3 text-xs uppercase font-bold tracking-widest text-slate-200 border border-brand-gold-500/40 rounded-lg bg-brand-navy-900"
+              className="w-full flex items-center justify-center gap-2 py-3 text-xs uppercase font-bold tracking-widest text-slate-200 border border-slate-700 rounded-lg bg-brand-navy-900 hover:border-[#25D366] transition-colors"
             >
-              Chat on WhatsApp
+              <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>

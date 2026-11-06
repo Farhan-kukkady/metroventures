@@ -7,12 +7,12 @@ import {
   ArrowUpRight,
   CheckCircle2,
   Phone,
-  MessageCircle,
   Scale,
   ShieldCheck,
   AlertTriangle,
   FileText,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { servicesData } from "@/data/services";
 import { companyData } from "@/data/company";
 import { siteConfig } from "@/data/config";
@@ -110,9 +110,10 @@ export default function LegalDocumentationPage() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2.5 rounded-xl bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] text-xs font-semibold hover:bg-[#25D366]/30 transition-all"
+              className="px-4 py-2.5 rounded-xl bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] text-xs font-semibold hover:bg-[#25D366]/30 transition-all flex items-center gap-1.5"
             >
-              WhatsApp
+              <WhatsAppIcon className="w-4 h-4" />
+              <span>WhatsApp</span>
             </a>
           </div>
         </div>

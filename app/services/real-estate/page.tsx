@@ -7,7 +7,6 @@ import {
   ArrowUpRight,
   CheckCircle2,
   Phone,
-  MessageCircle,
   TrendingUp,
   ShieldCheck,
   Search,

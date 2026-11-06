@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { MessageCircle, Phone, ArrowUp } from "lucide-react";
+import { Phone, ArrowUp } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { siteConfig } from "@/data/config";
 
 export function FloatingActions() {
@@ -72,7 +73,7 @@ export function FloatingActions() {
           {/* Pulsing radar ring */}
           <span className="absolute -inset-1 rounded-full bg-[#25D366] opacity-30 animate-ping group-hover:opacity-40" />
 
-          <MessageCircle className="w-5 h-5 fill-current shrink-0 relative" />
+          <WhatsAppIcon className="w-5 h-5 shrink-0 relative" />
           <span className="hidden sm:inline-block text-xs font-semibold tracking-wide pr-1 relative">
             WhatsApp
           </span>

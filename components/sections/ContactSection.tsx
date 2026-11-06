@@ -13,9 +13,9 @@ import {
   CheckCircle2,
   AlertCircle,
   Clock,
-  MessageCircle,
   Building2,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { siteConfig } from "@/data/config";
 
 const formSchema = z.object({
@@ -155,7 +155,7 @@ export function ContactSection() {
                 {/* WhatsApp */}
                 <div className="flex items-start gap-3.5">
                   <div className="w-10 h-10 rounded-xl bg-[#25D366]/20 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] shrink-0">
-                    <MessageCircle className="w-5 h-5" />
+                    <WhatsAppIcon className="w-5 h-5" />
                   </div>
                   <div>
                     <div className="text-xs text-slate-400 uppercase font-medium">WhatsApp Direct</div>
