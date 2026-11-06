@@ -36,14 +36,14 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="font-serif-heading text-xl font-bold tracking-wider gold-gradient-text">
+                  <span className="font-serif-heading text-xl font-bold tracking-wider text-white">
                     METRO
                   </span>
                   <span className="font-serif-heading text-xl font-medium tracking-wider text-slate-100">
                     VENTURES
                   </span>
                 </div>
-                <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-brand-gold-400">
+                <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-slate-400">
                   Karnataka, India
                 </span>
               </div>
@@ -55,7 +55,7 @@ export function Footer() {
               client satisfaction across Karnataka.
             </p>
 
-            <div className="pt-2 text-xs font-mono text-brand-gold-400/90 tracking-wide uppercase">
+            <div className="pt-2 text-xs font-mono text-slate-300 tracking-wider uppercase">
               Building dreams creating landmarks
             </div>
 

@@ -53,22 +53,22 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-3 lg:gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 shrink-0 transition-transform duration-300 group-hover:scale-105">
+          <Link href="/" className="shrink-0 flex items-center gap-2.5 sm:gap-3 group focus:outline-none">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 shrink-0 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/logo-icon.svg"
                 alt="Metro Ventures Seal"
-                width={44}
-                height={44}
+                width={40}
+                height={40}
                 priority
                 className="w-full h-full object-contain"
               />
             </div>
             <div className="flex flex-col">
               <div className="flex items-baseline gap-1.5">
-                <span className="font-serif-heading text-lg sm:text-xl font-bold tracking-wider gold-gradient-text">
+                <span className="font-serif-heading text-lg sm:text-xl font-bold tracking-wider text-white">
                   METRO
                 </span>
                 <span className="font-serif-heading text-lg sm:text-xl font-medium tracking-wider text-slate-100">
@@ -82,10 +82,10 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 2xl:gap-7 text-xs xl:text-sm font-medium whitespace-nowrap px-1">
             <Link
               href="/#overview"
-              className="text-slate-300 hover:text-brand-gold-400 transition-colors py-1"
+              className="text-slate-300 hover:text-white transition-colors py-1"
             >
               Overview
             </Link>
@@ -98,10 +98,10 @@ export function Navbar() {
             >
               <button
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                className="flex items-center gap-1 text-slate-300 group-hover:text-brand-gold-400 transition-colors py-1 focus:outline-none"
+                className="flex items-center gap-1 text-slate-300 group-hover:text-white transition-colors py-1 focus:outline-none"
               >
                 <span>Services</span>
-                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 text-brand-gold-500/70" />
+                <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-slate-400" />
               </button>
 
               <div
@@ -111,18 +111,18 @@ export function Navbar() {
                     : "opacity-0 -translate-y-2 pointer-events-none"
                 }`}
               >
-                <div className="bg-brand-navy-900/95 border border-brand-gold-500/30 rounded-xl p-2 shadow-2xl backdrop-blur-xl">
+                <div className="bg-brand-navy-900/98 border border-slate-700/80 rounded-xl p-2 shadow-2xl backdrop-blur-xl">
                   {serviceSubLinks.map((s) => (
                     <Link
                       key={s.href}
                       href={s.href}
                       className="flex items-start gap-3 p-2.5 rounded-lg hover:bg-brand-navy-800 transition-colors group/item"
                     >
-                      <span className="text-xs font-mono font-bold text-brand-gold-500 mt-0.5">
+                      <span className="text-xs font-mono font-bold text-white mt-0.5">
                         {s.division}
                       </span>
                       <div>
-                        <div className="text-sm font-medium text-slate-200 group-hover/item:text-brand-gold-300">
+                        <div className="text-sm font-medium text-slate-200 group-hover/item:text-white">
                           {s.name}
                         </div>
                         <div className="text-[11px] text-slate-400">
@@ -134,7 +134,7 @@ export function Navbar() {
                   <div className="mt-1 pt-2 border-t border-slate-800 px-2">
                     <Link
                       href="/#services"
-                      className="text-xs text-brand-gold-400 hover:underline flex items-center justify-between"
+                      className="text-xs text-white hover:underline flex items-center justify-between"
                     >
                       <span>View All Services on Home</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -146,72 +146,83 @@ export function Navbar() {
 
             <Link
               href="/#why-us"
-              className="text-slate-300 hover:text-brand-gold-400 transition-colors py-1"
+              className="hidden xl:inline-block text-slate-300 hover:text-white transition-colors py-1"
             >
               Why Us
             </Link>
 
             <Link
               href="/#projects"
-              className="text-slate-300 hover:text-brand-gold-400 transition-colors py-1"
+              className="text-slate-300 hover:text-white transition-colors py-1"
             >
               Projects
             </Link>
 
             <Link
               href="/#karnataka-map"
-              className="text-slate-300 hover:text-brand-gold-400 transition-colors py-1"
+              className="text-slate-300 hover:text-white transition-colors py-1"
             >
               Where We Build
             </Link>
 
             <Link
               href="/#leadership"
-              className="text-slate-300 hover:text-brand-gold-400 transition-colors py-1"
+              className="hidden 2xl:inline-block text-slate-300 hover:text-white transition-colors py-1"
             >
               Leadership
             </Link>
 
             <Link
               href="/#contact"
-              className="text-slate-300 hover:text-brand-gold-400 transition-colors py-1"
+              className="text-slate-300 hover:text-white transition-colors py-1"
             >
               Contact
             </Link>
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 shrink-0">
+            {/* Phone pill on xl+ */}
             <a
               href={`tel:${siteConfig.phone}`}
-              className="flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-brand-gold-400 px-3 py-2 rounded-lg border border-slate-700/60 hover:border-brand-gold-500/40 transition-colors"
+              className="hidden xl:flex items-center gap-2 text-xs font-semibold text-slate-200 hover:text-white px-3 py-2 rounded-lg border border-slate-700/80 hover:border-slate-500 transition-colors whitespace-nowrap"
             >
-              <Phone className="w-3.5 h-3.5 text-brand-gold-500" />
+              <Phone className="w-3.5 h-3.5 text-white" />
               <span>{siteConfig.phoneFormatted}</span>
+            </a>
+
+            {/* Compact Phone icon button on lg */}
+            <a
+              href={`tel:${siteConfig.phone}`}
+              aria-label="Call Metro Ventures"
+              title={`Call ${siteConfig.phoneFormatted}`}
+              className="flex xl:hidden items-center justify-center p-2 rounded-lg text-slate-200 hover:text-white border border-slate-700/80 hover:border-slate-500 transition-colors"
+            >
+              <Phone className="w-4 h-4 text-white" />
             </a>
 
             <Link
               href="/#contact"
-              className="relative inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-brand-navy-950 bg-gradient-to-r from-brand-gold-400 via-brand-gold-500 to-brand-gold-600 rounded-lg hover:shadow-lg hover:shadow-brand-gold-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="relative inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2 text-xs font-semibold uppercase tracking-wider text-brand-navy-950 bg-white hover:bg-slate-200 rounded-lg shadow-sm hover:shadow-md transition-all whitespace-nowrap"
             >
               <span>Consultation</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex sm:hidden items-center gap-2">
+          {/* Mobile / Tablet Menu Button */}
+          <div className="flex lg:hidden items-center gap-2">
             <a
               href={`tel:${siteConfig.phone}`}
               aria-label="Call Metro Ventures"
-              className="p-2 rounded-lg text-brand-gold-400 border border-brand-gold-500/30"
+              className="p-2 rounded-lg text-white border border-slate-700/80 hover:bg-slate-800"
             >
               <Phone className="w-4 h-4" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
-              className="p-2 rounded-lg text-slate-300 hover:text-brand-gold-400 hover:bg-brand-navy-800 focus:outline-none"
+              className="p-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 focus:outline-none"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -221,7 +232,7 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-x-0 top-[65px] bg-brand-navy-950/98 backdrop-blur-2xl border-b border-brand-gold-500/20 px-6 py-6 transition-all duration-300 sm:hidden ${
+        className={`fixed inset-x-0 top-[65px] bg-brand-navy-950/98 backdrop-blur-2xl border-b border-slate-800 px-6 py-6 transition-all duration-300 lg:hidden ${
           mobileMenuOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"
