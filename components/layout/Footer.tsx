@@ -27,7 +27,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <div className="shrink-0">
                 <Image
-                  src="/logo-icon.svg"
+                  src="/logo-icon-white.png"
                   alt="Metro Ventures Seal"
                   width={48}
                   height={48}

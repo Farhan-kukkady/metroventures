@@ -33,9 +33,9 @@ export function AboutOverview() {
 
         {/* Proven Experience Banner */}
         <div className="relative mb-20 p-8 sm:p-10 rounded-2xl bg-gradient-to-r from-brand-navy-900 via-brand-navy-850 to-brand-navy-900 border border-brand-gold-500/30 shadow-2xl overflow-hidden">
-          {/* Subtle gold emblem backdrop watermark */}
+          {/* Exact emblem backdrop watermark */}
           <div className="absolute right-4 -bottom-10 w-64 h-64 opacity-5 pointer-events-none">
-            <Image src="/logo-icon.svg" alt="Watermark" width={256} height={256} className="w-full h-full object-contain" />
+            <Image src="/logo-icon-white.png" alt="Watermark" width={256} height={256} className="w-full h-full object-contain" />
           </div>
 
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">

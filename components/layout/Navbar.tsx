@@ -59,7 +59,7 @@ export function Navbar() {
           <Link href="/" className="shrink-0 flex items-center gap-2.5 sm:gap-3 group focus:outline-none">
             <div className="relative w-9 h-9 sm:w-10 sm:h-10 shrink-0 transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/logo-icon.svg"
+                src="/logo-icon-white.png"
                 alt="Metro Ventures Seal"
                 width={40}
                 height={40}
